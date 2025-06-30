@@ -113,7 +113,7 @@ spotify_csv/
 
 ## 🔐 Consideraciones de seguridad
 
-Este proyecto no maneja datos sensibles ni personales. Está pensado únicamente para fines educativos y de demostración técnica.
+Este proyecto no maneja datos sensibles ni personales. Está pensado únicamente para fines educativos.
 
 ---
 
