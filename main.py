@@ -264,7 +264,7 @@ def exportar_excel(df_duracion, df_animo, df_acustica, df_energia, df_lanzamient
         if ruta_img.exists():
             ws = wb[hoja]
             img = Img(str(ruta_img))
-            img.anchor = "H2"
+            img.anchor = "J2"
             ws.add_image(img)
 
     wb.save(archivo_excel)
