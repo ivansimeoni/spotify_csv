@@ -1,34 +1,59 @@
-# Análisis de Canciones con Datos de Spotify
+# 🎧 Análisis Estratégico de la Música con Datos de Spotify
 
-Este proyecto realiza un análisis exploratorio y visual de un conjunto de datos de canciones provisto por Spotify. Busca responder preguntas clave sobre la duración, el tono emocional (valence), la presencia de letras explícitas, las tendencias acústicas y los patrones de lanzamiento de la música a lo largo del tiempo.
+Este proyecto no nace del azar. Surge de una intención clara: observar el cambio en la música desde un lugar de control y diseño.
+
+Tomé un dataset de más de 1,2 millones de canciones para responder preguntas que muchos se hacen y pocos resuelven con datos:
+¿Las canciones son más cortas? ¿Más explícitas? ¿Qué patrones marcan los lanzamientos cada año?
+
+Pero no me interesaba un simple análisis.
+Quería construir una herramienta que hablara por mí. Un informe automático, visual y profesional. Un entregable que pudiera generar en segundos y compartir con impacto.
+
+Con solo ejecutar python main.py, obtengo un archivo Excel con gráficos embebidos que revela tendencias, decisiones de la industria, y cambios culturales, año tras año.
 
 Por limitaciones de GitHub, el dataset completo (345 MB) no se incluye, pero el análisis fue realizado localmente sobre el conjunto completo.
 
 📁 Puede descargarse el dataset completo desde: [Spotify Tracks Dataset (Kaggle)](https://www.kaggle.com/datasets/rodolfofigueroa/spotify-12m-songs?resource=download)
 
----
 
-## 🔍 Características
+## 🔍 Características destacadas
 
-* Análisis de duración, energía, valence y otras métricas musicales por año.
-* Identificación de los meses con más lanzamientos musicales.
-* Comparativa de canciones explícitas vs. no explícitas.
-* Exportación automática a un archivo Excel con tablas y gráficos embebidos.
+* Análisis cronológico de métricas musicales clave: duración, energía, valence, acústica, y letras explícitas.
 
----
+* Identificación de patrones de lanzamiento por mes.
+
+* Exportación automática a Excel, con gráficos embebidos y listos para presentación.
+
+* Resultados visuales en alta calidad, generados en segundos desde consola.
+
+* Código modular, reutilizable y fácil de escalar para nuevos análisis.
+
 
 ## ⚙️ Cómo funciona
 
-Cada análisis se ejecuta como una función en Python, que genera un DataFrame y un gráfico. Al finalizar, todo se exporta a un archivo `.xlsx` usando `openpyxl`, incluyendo las visualizaciones.
+El proyecto está diseñado para ejecutarse con un solo comando:
 
----
+    ```bash
+    python main.py
+    ```
+
+Este proceso realiza automáticamente:
+
+Limpieza y depuración del dataset original (más de 1,2 millones de canciones).
+
+Cálculo de estadísticas anuales para cada métrica clave.
+
+Generación de gráficos en formato PNG para cada análisis.
+
+Exportación a un archivo Excel con tablas y visualizaciones incrustadas.
+
+El resultado final es un informe automatizado, claro y visualmente profesional, listo para compartir.
+
 
 ## Salidas
 
 - **Gráficos**: Se generan imágenes en formato PNG para cada análisis en `resultados/graficos/`.
 - **Reporte Excel**: Se crea un archivo Excel con tablas y gráficos incrustados en `resultados/tablas/analisis_spotify.xlsx`.
 
----
 
 ## 📦 Requisitos
 
@@ -44,7 +69,6 @@ Instalación de dependencias:
 pip install pandas matplotlib seaborn openpyxl
 ```
 
----
 
 ## 🚀 Instrucciones para ejecutar la aplicación
 
@@ -62,8 +86,6 @@ python main.py
 ```
 
 3. Ver los resultados en la carpeta `resultados/tablas/analisis_spotify.xlsx`
-
----
 
 ## 🧪 Ejemplo de uso
 
@@ -88,13 +110,11 @@ El resultado final es un informe listo para compartir, con insights como:
 📈 La música ha ganado energía pero perdió duración.
 📅 Enero, octubre, septiembre son los meses con más lanzamientos.
 
----
 
 ## 📊 Ejemplo visual
 
 ![Gráfico de canciones explicitas](img/grafico.png)
 
----
 
 ## 🗂️ Estructura del proyecto
 
@@ -109,13 +129,11 @@ spotify_csv/
 ├── README.md
 ```
 
----
 
 ## 🔐 Consideraciones de seguridad
 
 Este proyecto no maneja datos sensibles ni personales. Está pensado únicamente para fines educativos.
 
----
 
 ## 👨‍💼 Autor
 
