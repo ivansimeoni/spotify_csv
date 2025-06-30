@@ -96,20 +96,11 @@ El resultado final es un informe listo para compartir, con insights como:
 
 ---
 
-## 📓 Análisis paso a paso en Jupyter Notebook
-
-Incluyo el archivo `main.ipynb` como parte del proyecto para mostrar el proceso de razonamiento, pruebas y validación que hice antes de modularizar el código final.
-
-Es ideal si querés ver cómo fui construyendo cada parte del análisis de forma progresiva, ajustando el tratamiento de datos, visualizaciones y preguntas clave sobre las canciones de Spotify.
-
----
-
 ## 🗂️ Estructura del proyecto
 
 ```
 spotify_csv/
 ├── main.py                  # Análisis y exportación
-├── main.ipynb               # Versión notebook para pruebas
 ├── tracks_features.csv      # Dataset de entrada
 ├── resultados/
 │   ├── graficos/            # PNGs de los gráficos

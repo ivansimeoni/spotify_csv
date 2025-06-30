@@ -21,9 +21,9 @@ def limpieza_datos(df):
     df = df.dropna(subset=["album", "name", "release_date"])
     
     # Seleccionamos solo las columnas relevantes para el análisis y creamos una copia
-    df_limpio = df[['id', 'name', 'album', 'artists', 'track_number', 'disc_number', 'explicit', 'danceability', 
-                      'energy', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 
-                      'duration_ms', 'time_signature', 'year', 'release_date']].copy()
+    df_limpio = df[['name', 'album', 'artists', 'explicit', 'energy', 'speechiness', 
+                    'acousticness', 'instrumentalness', 'valence', 'duration_ms', 'year', 
+                    'release_date']].copy()
     return df_limpio
 
 # ¿Las canciones actuales son más cortas que antes?
@@ -64,7 +64,7 @@ def animo(df_filtrado):
     plt.bar(valence["year"], valence["valence"], color='skyblue')
     plt.title("Valence promedio")
     plt.xlabel("Año")
-    plt.ylabel("valence")
+    plt.ylabel("Valence promedio")
     plt.grid(axis="y", linestyle='--', alpha=0.7)
     plt.tight_layout()
     
@@ -181,12 +181,6 @@ def canciones_explicitas(df_filtrado):
 
     # Calculamos el total de canciones por año (explícitas + no explícitas)
     total_año = df_filtrado.groupby("year").size()
-
-    # Calculamos el porcentaje de canciones explícitas por año
-    porcentaje_explicitas = (explicitas / total_año) * 100
-
-    # Calculamos la cantidad de canciones no explícitas por año
-    no_explicitas = total_año - explicitas.fillna(0)
 
     # Creamos el DataFrame combinado de explícitas y no explícitas
     df_completo = pd.DataFrame({
