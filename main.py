@@ -233,7 +233,7 @@ def canciones_explicitas(df_filtrado):
 
     return df_completo
 
-def exportar_excel(df_duracion, df_valance, df_acustica, df_energia, df_lanzamientos, df_top3, df_explicitas, carpeta_graficos, carpeta_tablas):
+def exportar_excel(df_duracion, df_animo, df_acustica, df_energia, df_lanzamientos, df_top3, df_explicitas, carpeta_graficos, carpeta_tablas):
 
     # Ruta del archivo Excel
     archivo_excel = carpeta_tablas / "analisis_spotify.xlsx"
