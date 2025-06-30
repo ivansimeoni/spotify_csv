@@ -78,8 +78,7 @@ def animo(df_filtrado):
 def acustica(df_filtrado):
 
     # Definimos las características acústicas a analizar
-    caracteristicas = ['danceability', 'energy', 'acousticness',
-                    'instrumentalness', 'liveness', 'speechiness', 'valence']
+    caracteristicas = ['acousticness', 'instrumentalness', 'speechiness',]
 
     # Calculamos el promedio anual de cada característica acústica
     caracteristicas_acusticas = df_filtrado.groupby("year")[caracteristicas].mean().reset_index()
@@ -89,7 +88,7 @@ def acustica(df_filtrado):
 
     plt.stackplot(caracteristicas_acusticas["year"],
                 [caracteristicas_acusticas[col] for col in caracteristicas],
-                labels=caracteristicas, alpha=0.8)
+                labels=caracteristicas, alpha=0.6)
 
     plt.title("Distribución de características acústicas por año")
     plt.xlabel("Año")
@@ -264,7 +263,7 @@ def exportar_excel(df_duracion, df_animo, df_acustica, df_energia, df_lanzamient
         if ruta_img.exists():
             ws = wb[hoja]
             img = Img(str(ruta_img))
-            img.anchor = "J2"
+            img.anchor = "H2"
             ws.add_image(img)
 
     wb.save(archivo_excel)
