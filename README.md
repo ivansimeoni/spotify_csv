@@ -1,4 +1,4 @@
-# 🎧 Análisis Estratégico de la Música con Datos de Spotify
+# 🎧 Análisis estratégico de la música con datos de spotify
 
 Este proyecto no nace del azar. Surge de una intención clara: observar el cambio en la música desde un lugar de control y diseño.
 
